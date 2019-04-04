@@ -12,3 +12,11 @@ This has been designed for and tested with u-blox M8N receivers and device manag
 The code for the ESP32 uses the following library:
 
 https://github.com/RocketManRC/u-blox-m8
+
+I have added the code block that is within PPS_Coaster_TCXO.ice which is called Send64BitsToUART.ice. This sends a 64 bit values to the UART in BCD format. The logic for this came from here: 
+
+https://github.com/shuckc/verilog-utils/blob/master/bcd/bin2bcd_serial.v
+
+The actual UART TX is contained in UartTx.ice and the reference for that is here:
+
+https://github.com/FPGAwars/FPGA-peripherals/tree/master/uart-tx
